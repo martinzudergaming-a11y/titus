@@ -12,7 +12,7 @@ rules:
   pattern: |
     (?xi)
     \b
-    (?P<token>xx[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})
+    (?P<token>xx[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12})
     \b
 
   categories: [api, secret]
@@ -45,7 +45,7 @@ rules:
   examples:
   - 'xx564559b1-0045-48e1-953c-3addd1ee4457'
   - "accessToken: 'xx564559b1-0045-48e1-953c-3addd1ee4457'"
-  - 'xxABCDEF12-3456-7890-abcd-ef1234567890'
+  - 'xxABCDEF12-3456-4789-abcd-ef1234567890'
 
   negative_examples:
   - '564559b1-0045-48e1-953c-3addd1ee4457'           # bare UUID without the xx prefix
